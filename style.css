@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+#header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+
+#header #logo{
+    height: 30px;
+    margin: 10px;
+    filter: drop-shadow(2px 5px 10px rgba(133, 124, 124, 0.425));
+}
+#header #navbar ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    font-family: Tagesschrift;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#header  #navbar ul li img{
+    height: 30px;
+}
+
+#header  #navbar ul li a{
+    text-decoration: none;
+    color: black;
+    padding-top: 20px;
+}
+#header  #navbar ul li a span{
+    color: red;
+}
+#header #navbar ul li {
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#header #navbar ul li::after {
+    content: "";
+    position: absolute;
+    width: 0%; /* Start at 0 width */
+    height: 2px;
+    left: 10%;
+    bottom: -2px;
+    background-color: #48dd03a9;
+    box-shadow: 0 0 5px rgba(9, 196, 56, 0.601) ;
+    transition: width 0.6s ease; /* Animate width */
+}
+
+#header #navbar ul li:hover::after,
+#header #navbar ul li.active::after {
+    width: 100%; /* Full underline on hover or active */
+}
+
+@media (max-width:799px) {
+    #header #navbar ul {
+        gap: 30px;
+        font-size: 16px;
+    }
+    #header #logo {
+        height: 20px;
+    }
+    #header  #navbar ul li img {
+        height: 20px;
+    }
+}
+
+/* @media (max-width:375px) {
+    #header #navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+} */
