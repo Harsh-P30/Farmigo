@@ -1,3 +1,4 @@
 # Farmigo
 A Web Application for farming.
-<p style="color:red">Sorry We are working</p>
+<p style="color:red; text-align:center;">Sorry, we are working on it.</p>
+
